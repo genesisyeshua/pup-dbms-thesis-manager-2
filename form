@@ -1,0 +1,23 @@
+<form id="form" class="form" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+    <h1>Thesis Entry</h1>
+    <div class="content">
+        <div class="intro"><p>Complete the necessary fields below.</p></div>
+        <div id="section0" >
+            <div class="field"><label for="school_year">Academic Year</label><select id="school_year" name="school_year" required><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option></select></div>
+            <div class="field"><input type="text" id="thesistitle" name="thesistitle" placeholder="Thesis Title" required></div>
+            <div class="field"><input type="text" id="subtitle" name="subtitle" placeholder="Subtitle"></div>
+            <div class="field"><textarea id="abstract" name="abstract" placeholder="Thesis Abstract" wrap="hard" required></textarea></div>
+            
+            <div class="field"><input type="text" id="adviser" name="adviser" placeholder="Thesis Adviser" required></div>
+            <div class="field"><input type="text" id="proponent1" name="proponent1" placeholder="Proponent 1" required></div>
+            <div class="field"><input type="text" id="proponent2" name="proponent2" placeholder="Proponent 2" required></div>
+            <div class="field"><input type="text" id="proponent3" name="proponent3" placeholder="Proponent 3" required></div>
+            <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><input type="text" id="proponent4" name="proponent4" placeholder="Proponent 4" required></div>
+            <div class="field"><input type="text" id="proponent5" name="proponent5" placeholder="Proponent 5"></div><div class="field"><label for="section">Section</label><select id="section" name="section" required><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+            <div class="field"><input type="text" id="tags" name="tags" placeholder="Tags comma-separated"></div>
+            <div class="field"><input type="submit" id="create" name="create" required></div>
+        </div>
+    </div>
+</form>
+
+<link href="http://fonts.googleapis.com/css?family=Lato" id="google-font-selector" rel="stylesheet" type="text/css">

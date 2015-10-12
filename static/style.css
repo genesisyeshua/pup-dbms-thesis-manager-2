@@ -1,0 +1,36 @@
+body {
+}
+
+.main {
+    width: 400px;
+    margin: auto;
+}
+
+form input[type=text] {
+    width: 100%;
+    margin-top: 5px;
+    line-height: 20px;
+}
+form input[type=submit] {
+    margin-top: 5px;
+    position: relative;
+    float: right;
+}
+
+form textarea {
+  width: 100%;
+  margin-top: 5px;
+  line-height: 20px;
+}
+
+a#loginbuttonbtn.btn-block.btn-lg.btn-primary a#regbuttonbtn.btn-block.btn-lg.btn-primary{
+  position: relative;
+  margin: auto;
+}
+
+
+.dashboard{
+  position: relative;
+  width:20%;
+  height:50%;
+}

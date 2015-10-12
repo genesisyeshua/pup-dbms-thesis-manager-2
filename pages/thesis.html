@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Thesis Manager</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/freelancer.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src='/static/jquery-1.11.3.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="/static/chosen.min.css" />
+    <script type="text/javascript" src='/static/chosen.jquery.min.js'></script>
+    <!-- Custom Fonts -->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- sidebar -->
+    <link rel="stylesheet" href="/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="/css/style.css"> <!-- Resource style -->
+    <script src="/js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" href="#page-top">Thesis Manager</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="page-scroll">  
+                        <a href="#">HELLO, {{user}}</a>
+                    </li>
+                    <li class="page-scroll">  
+                        <a href="{{logout_url}}" style="float: right;">Logout</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+<!--     <div class='main'> -->
+        <main class="cd-main-content">
+        <nav class="cd-side-nav">
+            <ul>
+                <li class="cd-label">Main</li>
+                <li class="has-children overview">
+                    <a href="{{thesis_create_url}}">Create Thesis</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{faculty_create_url}}">Add Faculty</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{student_create_url}}">Add Student</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{university_create_url}}">Add University</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{college_create_url}}">Add College</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{department_create_url}}">Add Department</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{faculty_view_url}}">View Faculty List</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{student_view_url}}">View Student List</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{university_list_url}}">View Universities</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{college_list_url}}">View College List</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content-wrapper">
+                <div class='form-section'>
+                <form class='thesis-entry'>
+                    <h2 align='center'><b><u> NEW THESIS ENTRY </u></b></h2><br/>
+                  <p>Thesis Year</p>  
+                    <select data-placeholder='Select Year' class='chose-select thesis_year' name="thesis_year">
+                    <option selected></option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                  </select>
+
+                  <p>Title</p>
+                  <input class="field" type="text" name="thesis_title" placeholder="THESIS TITLE" />
+                  <p>Abstract</p>
+                  <textarea class="field" name="thesis_abstract" placeholder="THESIS ABSTRACT" > </textarea>
+
+                  <p>Thesis Adviser</p> 
+                    <select class="chosen-select thesis_adviser" name="thesis_adviser" data-placeholder="Select Thesis Adviser">
+                    <option selected></option>
+                    <option><button href='/faculty/create'>Add Faculty</button></option>
+                  </select><br/>
+                  <p>Section</p>
+                  <select data-placeholder="Select Section" class='chose-select thesis_section' name="thesis_section">
+                    <option selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <br/>
+
+                  <p>Proponents </p>
+                    <select data-placeholder='Select Proponents' multiple="" class='chosen-select thesis_proponents' name='thesis_proponents'>
+                    <option selected></option>
+                    <option>Add Student</option>
+                  </select><br/>
+
+                <p>Department </p>
+                  <select data-placeholder='Select Department' class='chose-select thesis_department' name='thesis_department'>
+                    <option selected></option>
+                    <option>Add Department</option>
+                  </select><br/>
+
+                  <button type="submit" class="btn btn-success btn-lg">Create</button>
+                </form>
+                </div>
+        </div> <!-- .content-wrapper -->
+<!-- Resource jQuery -->
+<script src="/js/jquery-2.1.4.js"></script>
+<script src="/js/jquery.menu-aim.js"></script>
+<script src="/js/main.js"></script> 
+<script type="text/javascript" src='/static/script.js'></script>
+</body>
+</html>
+

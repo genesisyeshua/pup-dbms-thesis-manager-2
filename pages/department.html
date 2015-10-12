@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Thesis Manager</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/freelancer.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src='/static/jquery-1.11.3.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="/static/chosen.min.css" />
+    <script type="text/javascript" src='/static/chosen.jquery.min.js'></script>
+    <script type="text/javascript" src='/static/chosen.proto.min.js'></script>
+    <!-- Custom Fonts -->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- sidebar -->
+    <link rel="stylesheet" href="/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="/css/style.css"> <!-- Resource style -->
+    <script src="/js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" href="#page-top">Thesis Manager</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="page-scroll">  
+                        <a href="#">HELLO, {{user}}</a>
+                    </li>
+                    <li class="page-scroll">  
+                        <a href="{{logout_url}}" style="float: right;">Logout</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+<!--     <div class='main'> -->
+        <main class="cd-main-content">
+        <nav class="cd-side-nav">
+            <ul>
+                <li class="cd-label">Main</li>
+                <li class="has-children overview">
+                    <a href="{{thesis_create_url}}">Create Thesis</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{faculty_create_url}}">Add Faculty</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{student_create_url}}">Add Student</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{university_create_url}}">Add University</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{college_create_url}}">Add College</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{department_create_url}}">Add Department</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{faculty_view_url}}">View Faculty List</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{student_view_url}}">View Student List</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{university_list_url}}">View Universities</a>
+                </li>
+                <li class="has-children overview">
+                    <a href="{{college_list_url}}">View College List</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content-wrapper">
+                <div class='form-section'>
+                    <form class="department-entry">
+                        <h2 align='center'><b><u> CREATE DEPARTMENT</u></b></h2><br/><br/><br/>
+                        <p>College</p>
+                      <select class='chosen-select college-list' name='department_college'></select>
+                      <br/><br/>
+                      <p> Department Name</p>
+                      <input class='field' name='department_name' />
+                      <br/><br/>
+                      <p> Chairperson</p>
+                      <select class='chosen-select faculty-list' name='department_chair'></select>
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      <button type="submit" class="btn btn-success btn-lg">Create</button>
+                    </form>
+
+                </div>
+        </div> <!-- .content-wrapper -->
+<!-- Resource jQuery -->
+<script src="/js/jquery-2.1.4.js"></script>
+<script src="/js/jquery.menu-aim.js"></script>
+<script src="/js/main.js"></script> 
+<script type="text/javascript" src='/static/script.js'></script>
+<script type="text/javascript" src='/static/assets-department.js'></script>
+<script type="text/javascript" src='/static/assets-faculty.js'></script>
+<script type="text/javascript" src='/static/assets-college.js'></script>
+</body>
+</html>
+

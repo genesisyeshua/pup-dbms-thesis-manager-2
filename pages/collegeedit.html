@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src='/static/jquery-1.11.3.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="/static/chosen.min.css" />
+    <script type="text/javascript" src='/static/chosen.jquery.min.js'></script>
+    <script type="text/javascript" src='/static/chosen.proto.min.js'></script>
+</head>
+<body>
+<div class='main'>
+    <h3>Welcome to THESIS ARCHIVE, {{user}}</h3>
+    <a href="{{logout_url}}" style="float: right;">Logout</a>
+    <br>
+    <br>
+    <div class='form-section'>
+        <form class="college_departments">
+          <select class='chosen-select university-list' name='college_university'>
+            <option selected value='{{univ}}'>{{univ}}</option>
+          </select>
+          <input class='field' placeholder='COLLEGE NAME' name='college_name' value='{{item.college_name}}'/><br>
+          <select data-placeholder='Select Proponents' multiple="" class='chosen-select college_department' name='college_department' id='select' />
+            {% for d in dept %}
+              <option selected value='{{d}}'>{{d}}</option>
+            {% endfor %}
+          </select>
+          <input type="submit" value='SUBMIT' />
+          
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src='/static/assets-college.js'></script>
+<script type="text/javascript" src='/static/assets-university.js'></script>
+</body>
+</html>
